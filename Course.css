@@ -1,0 +1,29 @@
+.Course {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 25vmin;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 13px;
+  }
+  
+  .Course-header {
+    background-color: #ffffff;
+    top: 0px;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(25px + 2vmin);
+    color: rgb(0, 56, 101);
+  }
+  
+  .subheader {
+    color: #A4C8E1;
+    align-items: center;
+    top: 0px;
+    font-size: 50px;
+  }
+  
