@@ -10,7 +10,7 @@ xlsxFile('./src/Requirements.xlsx')
     rows.forEach((row) => {
       row.forEach((cell) => {
         
-        if (cell.includes("Year")){
+        if (cell!= null && cell.includes("Year")){
             //while listing column headers create semester set up
             semesterCount ++;
 
