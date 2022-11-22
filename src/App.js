@@ -28,9 +28,10 @@ function App() {
       <div class="dropdown">
         <input class="text-box" type="text" placeholder="Select on" readonly></input>
         <div class="options">
-          <div onclick="show('COMSC')">COMSC</div>
+          <div onclick="show('COMSC BA')">COMSC BA</div>
+          <div onclick="show('COMSC BS')">COMSC BS</div>
           <div onclick="show('CM')">CM</div>
-          <div onclick="show('ENG')">ENG</div>
+          <div onclick="show('ENG')">ENGR</div>
         </div>
       </div>
 
