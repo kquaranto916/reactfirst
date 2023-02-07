@@ -154,7 +154,7 @@ const App = () => {
 
   /*Next Button*/
   const handleClickNext =() => {
-    window.location = "Courses.js";
+    window.location = "Course.js";
   }
 
   /*Upload file button*/
@@ -177,7 +177,7 @@ const App = () => {
         <h1>
           Advising Assistant
         </h1>
-      <header>
+    <header>
         <subheading className="subheader">
             Welcome!
         </subheading>
@@ -259,14 +259,28 @@ const App = () => {
   );
 }
 /*major dropdown*/
-const Dropdown = ({ open, trigger, menu }) => {
+const Dropdown = ({ trigger, menu }) => {
+  const [open, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open);
+  };
   return (
     <div className="dropdown">
-      {trigger}
+      {React.cloneElement(trigger, {
+        onClick: handleOpen,
+      })}
       {open ? (
         <ul className="menu">
           {menu.map((menuItem, index) => (
-            <li key={index} className="menu-item">{menuItem}</li>
+            <li key={index} className="menu-item">
+              {React.cloneElement(menuItem, {
+                onClick: () => {
+                  menuItem.props.onClick();
+                  setOpen(false);
+                },
+              })}
+            </li>
           ))}
         </ul>
       ) : null}
@@ -275,14 +289,28 @@ const Dropdown = ({ open, trigger, menu }) => {
 };
 
 /*minor dropdown*/
-const Dropdown2 = ({ open2, trigger2, minor }) => {
+const Dropdown2 = ({ trigger2, minor }) => {
+  const [open2, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open2);
+  };
   return (
-    <div className="dropdown2">
-      {trigger2}
+    <div className="dropdown">
+      {React.cloneElement(trigger2, {
+        onClick: handleOpen,
+      })}
       {open2 ? (
         <ul className="minor">
           {minor.map((minorItem, index) => (
-            <li key={index} className="minor-item">{minorItem}</li>
+            <li key={index} className="minor-item">
+              {React.cloneElement(minorItem, {
+                onClick: () => {
+                  minorItem.props.onClick();
+                  setOpen(false);
+                },
+              })}
+            </li>
           ))}
         </ul>
       ) : null}
@@ -291,14 +319,28 @@ const Dropdown2 = ({ open2, trigger2, minor }) => {
 };
 
 /*core concentration dropdown*/
-const Dropdown3 = ({ open3, trigger3, core }) => {
+const Dropdown3 = ({ trigger3, core }) => {
+  const [open3, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open3);
+  };
   return (
     <div className="dropdown3">
-      {trigger3}
+      {React.cloneElement(trigger3, {
+        onClick: handleOpen,
+      })}
       {open3 ? (
         <ul className="core">
           {core.map((coreItem, index) => (
-            <li key={index} className="core-item">{coreItem}</li>
+            <li key={index} className="core-item">
+              {React.cloneElement(coreItem, {
+                onClick: () => {
+                  coreItem.props.onClick();
+                  setOpen(false);
+                },
+              })}
+            </li>
           ))}
         </ul>
       ) : null}
@@ -307,14 +349,28 @@ const Dropdown3 = ({ open3, trigger3, core }) => {
 };
 
 /*specialization dropdown*/
-const Dropdown4 = ({ open4, trigger4, spec }) => {
+const Dropdown4 = ({ trigger4, spec }) => {
+  const [open4, setOpen] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpen(!open4);
+  };
   return (
     <div className="dropdown4">
-      {trigger4}
+      {React.cloneElement(trigger4, {
+        onClick: handleOpen,
+      })}
       {open4 ? (
         <ul className="spec">
           {spec.map((specItem, index) => (
-            <li key={index} className="spec-item">{specItem}</li>
+            <li key={index} className="spec-item">
+              {React.cloneElement(specItem, {
+                onClick: () => {
+                  specItem.props.onClick();
+                  setOpen(false);
+                },
+              })}
+            </li>
           ))}
         </ul>
       ) : null}
