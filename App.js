@@ -1,7 +1,6 @@
 import logo from './rwulogo.png';
 import './App.css';
-import React, {useState} from 'react';
-
+import React from 'react';
 
 const App = () => {
   /*opens major dropdown*/
@@ -147,26 +146,12 @@ const App = () => {
     console.log('clicked one');
   };
 
-  /*Previous Button*/
   const handleClickPrev =() => {
     window.location = "App.js";
   }
 
-  /*Next Button*/
   const handleClickNext =() => {
     window.location = "Courses.js";
-  }
-
-  /*Upload file button*/
-  const [file, setFile] = useState()
-
-  function handleChange(event) {
-    setFile(event.target.files[0])
-  }
-
-  /*Create new outline*/
-  function newTemplate() {
-    alert('A new template will be created based on the selected choices above');
   }
 
   /*implements the heading and main layout of the website*/
@@ -244,17 +229,6 @@ const App = () => {
         <button onClick={handleSpec13}>NONE</button>
       ]}
     /> 
-     <form>
-          <h1>Load Current Schedule</h1>
-          <input type="file" onChange={handleChange}/>
-          <button type="submit">Upload</button>
-          <h3> OR </h3>
-      </form>
-      <form>
-        <h1>Create New Schedule</h1>
-        <button onClick={newTemplate}>Click Here</button>;
-      </form>
-
   </div>
   );
 }

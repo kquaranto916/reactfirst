@@ -1,3 +1,4 @@
+/*app introduction layout*/
 .App {
   text-align: center;
 }
@@ -25,6 +26,165 @@
   align-items: center;
   top: 0px;
   font-size: 50px;
+}
+/*majors dropdown*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu {
+  position: absolute;
+  background-color: #A4C8E1;
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 0;
+  border: 1px solid grey;
+  width: 150px;
+}
+
+.menu > li {
+  margin: 0;
+
+  background-color: white;
+}
+
+.menu > li:hover {
+  background-color: #99bfdb;
+}
+
+.menu > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+/*minors dropdown*/
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+
+.minor {
+  position: absolute;
+  background-color: #A4C8E1;
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 0;
+  border: 1px solid grey;
+  width: 150px;
+}
+
+.minor > li {
+  margin: 0;
+
+  background-color: white;
+}
+
+.minor > li:hover {
+  background-color: #99bfdb;
+}
+
+.minor > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+/*core concentration dropdown*/
+.dropdown3 {
+  position: relative;
+  display: inline-block;
+}
+
+.core {
+  position: absolute;
+  background-color: #A4C8E1;
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 0;
+  border: 1px solid grey;
+  width: 150px;
+}
+
+.core > li {
+  margin: 0;
+
+  background-color: white;
+}
+
+.core > li:hover {
+  background-color: #99bfdb;
+}
+
+.core > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+/*specializations dropdown*/
+.dropdown4 {
+  position: relative;
+  display: inline-block;
+}
+
+.spec {
+  position: absolute;
+  background-color: #A4C8E1;
+  list-style-type: none;
+  margin: 5px 0;
+  padding: 0;
+  border: 1px solid grey;
+  width: 150px;
+}
+
+.spec > li {
+  margin: 0;
+
+  background-color: white;
+}
+
+.spec > li:hover {
+  background-color: #99bfdb;
+}
+
+.spec > li > button {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
 }
 
 /* major dropdown
@@ -65,95 +225,9 @@
 /* Change the background color of the dropdown button when the dropdown content is shown 
 .dropdown:hover .dropbtn {
   background-color: #99bfdb;
-}*/
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
-.container {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  background: #fafafa;
-}
-
-.dropdown {
-  position: relative;
-  top: 50px;
-  left: 45%;
-  margin-top: 15px;
-  width: 300px;
-  height: 50px;
-}
-
-.dropdown::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  z-index: 1000;
-  width: 8px;
-  height: 8px;
-  border: 2px solid #333;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  transform: rotate(-45deg);
-  transition: 0.5s;
-  pointer-events: none;
-}
-
-.dropdown.active::before {
-  top: 22px;
-  transform: rotate(-225deg);
-}
-
-.dropdown input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  background: #fff;
-  font-size: 1.2em;
-  border: none;
-  outline: none;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  padding: 12px 20px;
-  border-radius: 10px;
-}
-
-.dropdown .options {
-  position: absolute;
-  top: 70px;
-  width: 100%;
-  background: #fff;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-  overflow: hidden;
-  display: none;
-}
-
-.dropdown.active .options {
-  display: block;
-}
-
-.dropdown .options div {
-  padding: 12px 20px;
-  cursor: pointer;
-}
-
-.dropdown .options div:hover {
-  background: #62baea;
-  color: #fff;
-}
-/* MINOR DROPDOWN */
+/* MINOR DROPDOWN 
 .dropbtn2 {
   background-color: #A4C8E1;
   color: white;
@@ -163,7 +237,7 @@
   cursor: pointer;
 }
 
-/* The container <div> - needed to position the dropdown content */
+/* The container <div> - needed to position the dropdown content 
 .dropdown2 {
   float: right;
   position: relative;
@@ -171,7 +245,7 @@
   padding-right: 200px;
 }
 
-/* Dropdown Content (Hidden by Default) */
+/* Dropdown Content (Hidden by Default) 
 .dropdown-content2 {
   display: none;
   position: absolute;
@@ -181,7 +255,7 @@
   z-index: 1;
 }
 
-/* Links inside the dropdown */
+/* Links inside the dropdown 
 .dropdown-content2 a {
   color: black;
   padding: 12px 16px;
@@ -189,15 +263,15 @@
   display: block;
 }
 
-/* Change color of dropdown links on hover */
+/* Change color of dropdown links on hover 
 .dropdown-content2 a:hover {background-color: #f1f1f1}
 
-/* Show the dropdown menu on hover */
+/* Show the dropdown menu on hover 
 .dropdown2:hover .dropdown-content2 {
   display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
+/* Change the background color of the dropdown button when the dropdown content is shown 
 .dropdown2:hover .dropbtn2 {
   background-color: #99bfdb;
-}
+} */
