@@ -10,6 +10,9 @@ function Course() {
           Advising Assistant
         </h1>
       </header>
+      <subheading className="subheader">
+            Welcome!
+        </subheading>
   </div>
   );
 }
