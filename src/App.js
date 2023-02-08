@@ -2,159 +2,33 @@ import logo from './rwulogo.png';
 import './App.css';
 import React, {useState} from 'react';
 
-
 const App = () => {
-  /*opens major dropdown*/
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => {
-    setOpen(!open);
-  };
+  const [major, setMajor] = useState("Select");
 
-  const handleMenuOne = () => {
-    console.log('clicked one');
-  };
+  function changeMajor(event) {
+    console.log(event.target.value);
+    setMajor(event.target.value);
+  }
+  
+  const [minor, setMinor] = useState("Select");
 
-  const handleMenuTwo = () => {
-    console.log('clicked two');
-  };
-
-  const handleMenuThree = () => {
-    console.log('clicked three');
-  };
-
-  const handleMenuFour = () => {
-    console.log('clicked four');
-  };
-
-  /*opens minor dropdown*/
-  const [open2, setOpen2] = React.useState(false);
-
-  const handleOpen2 = () => {
-    setOpen2(!open2);
-  };
-
-  const handleMinor1 = () => {
-    console.log('clicked one');
-  };
-
-  const handleMinor2 = () => {
-    console.log('clicked one');
-  };
-
-  const handleMinor3 = () => {
-    console.log('clicked one');
-  };
-
-  const handleMinor4 = () => {
-    console.log('clicked one');
-  };
-
-  const handleMinor5 = () => {
-    console.log('clicked one');
-  };
-
-  const handleMinor6 = () => {
-    console.log('clicked one');
-  };
-
-  const handleMinor7 = () => {
-    console.log('clicked one');
-  };
-
-  const handleMinor8 = () => {
-    console.log('clicked one');
-  };
-
-  const handleMinor9 = () => {
-    console.log('clicked one');
-  };
-
-  /*opens core concentration dropdown*/
-  const [open3, setOpen3] = React.useState(false);
-
-  const handleOpen3 = () => {
-    setOpen3(!open3);
-  };
-
-  const handleCore1 = () => {
-    console.log('clicked one');
-  };
-
-  const handleCore2 = () => {
-    console.log('clicked one');
-  };
-
-  const handleCore3 = () => {
-    console.log('clicked one');
-  };
-
-  /*opens specialization dropdown*/
-  const [open4, setOpen4] = React.useState(false);
-
-  const handleOpen4 = () => {
-    setOpen4(!open4);
-  };
-
-  const handleSpec1 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec2 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec3 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec4 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec5 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec6 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec7 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec8 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec9 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec10 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec11 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec12 = () => {
-    console.log('clicked one');
-  };
-
-  const handleSpec13 = () => {
-    console.log('clicked one');
-  };
-
-  /*Previous Button*/
-  const handleClickPrev =() => {
-    window.location = "App.js";
+  function changeMinor(event){
+    console.log(event.target.value);
+    setMinor(event.target.value);
   }
 
-  /*Next Button*/
-  const handleClickNext =() => {
-    window.location = "Course.js";
+  const [core, setCore] = useState("Select");
+
+  function changeCore(event){
+    console.log(event.target.value);
+    setCore(event.target.value);
+  }
+
+  const [spec, setSpec] = useState("Select");
+
+  function changeSpec(event){
+    console.log(event.target.value);
+    setSpec(event.target.value);
   }
 
   /*Upload file button*/
@@ -162,11 +36,6 @@ const App = () => {
 
   function handleChange(event) {
     setFile(event.target.files[0])
-  }
-
-  /*Create new outline*/
-  function newTemplate() {
-    alert('A new template will be created based on the selected choices above');
   }
 
   /*implements the heading and main layout of the website*/
@@ -182,200 +51,93 @@ const App = () => {
             Welcome!
         </subheading>
       </header>
+
+      <header>
+        <h1 className="dropdownHeader">
+          Create New Schedule
+        </h1>
+      </header>
+      <header>
+        <p className='description1'>
+          Fill in the dropdown boxes below with the appropriate information and then press save to create a new schedule!
+        </p>
+      </header>
       </header>
 
-    <div>
-      <button onClick={handleClickPrev}>Previous</button> 
-      <button onClick={handleClickNext}>Next</button> 
+    <div className='major'>
+      <p>{major}</p>
+      <select value={major} onChange={changeMajor}>
+        <option>Select Major</option>
+        <option>COSMC BA</option>
+        <option>COSMC BS</option>
+        <option>CM</option>
+        <option>ENGR</option>
+      </select>
+    </div> 
+
+    <div className='minor'>
+      <p>{minor}</p>
+      <select value={minor} onChange={changeMinor}>
+        <option>Select Minor</option>
+        <option>MATH</option>
+        <option>COMSC</option>
+        <option>MANAGEMENT</option>
+        <option>CM</option>
+        <option>BIOMECHANICS</option>
+        <option>ENVIRONMENTAL ENGR</option>
+        <option>ROBOTICS</option>
+        <option>STRUCTURAL ENGR</option>
+        <option>BUSINESS ANALYTICS</option>
+      </select>
+    </div> 
+    
+    <div className='core'>
+      <p>{core}</p>
+      <select value={core} onChange={changeCore}>
+        <option>Select Core</option>
+        <option>COSMC</option>
+        <option>MATH</option>
+        <option>NONE</option>
+      </select>
+    </div> 
+
+    <div className='spec'>
+      <p>{spec}</p>
+      <select value={spec} onChange={changeSpec}>
+        <option>Select Specialization</option>
+        <option>CIVIL ENGR</option>
+        <option>COMPUTER ENGR</option>
+        <option>CUSTOM ENGR</option>
+        <option>ELECTRICAL ENGR</option>
+        <option>ENVIRONMENTAL ENGR</option>
+        <option>MECHANICAL ENGR</option>
+        <option>CUSTOM COMSC</option>
+        <option>DATA SCIENCE COMSC</option>
+        <option>DIGITAL SYSTEMS COMSC</option>
+        <option>HUMAN CENTERED COMPUTING COMSC</option>
+        <option>MATHEMATICS COMSC</option>
+        <option>NONE</option>
+      </select>
+    </div> 
+
+    <div className='or'>
+      <h2>
+        OR
+      </h2>
     </div>
 
-    <Dropdown
-      open={open}
-      trigger={<button onClick={handleOpen}>Majors</button>}
-      menu={[
-        <button onClick={handleMenuOne}>COMSC BA</button>,
-        <button onClick={handleMenuTwo}>COSMC BS</button>,
-        <button onClick={handleMenuThree}>CM</button>,
-        <button onClick={handleMenuFour}>ENGR</button>
-      ]}
-    />
-    
-    <Dropdown2
-      open2={open2}
-      trigger2={<button onClick={handleOpen2}>Minors</button>}
-      minor={[
-        <button onClick={handleMinor1}>MATH</button>,
-        <button onClick={handleMinor2}>COSMC</button>,
-        <button onClick={handleMinor3}>MANAGEMENT</button>,
-        <button onClick={handleMinor4}>CM</button>,
-        <button onClick={handleMinor5}>BIOMECHANICS</button>,
-        <button onClick={handleMinor6}>ENVIRONMENTAL ENGR</button>,
-        <button onClick={handleMinor7}>ROBOTICS</button>,
-        <button onClick={handleMinor8}>STRUCTURAL ENGR</button>,
-        <button onClick={handleMinor9}>BUSINESS ANALYTICS</button>
-      ]}
-    />
-
-    <Dropdown3
-      open3={open3}
-      trigger3={<button onClick={handleOpen3}>Core Concentration</button>}
-      core={[
-        <button onClick={handleCore1}>MATH</button>,
-        <button onClick={handleCore2}>COSMC</button>,
-        <button onClick={handleCore3}>NONE</button>
-      ]}
-    /> 
-    <Dropdown4
-      open4={open4}
-      trigger4={<button onClick={handleOpen4}>Specialization</button>}
-      spec={[
-        <button onClick={handleSpec1}>CIVIL ENGR</button>,
-        <button onClick={handleSpec2}>COMPUTER ENGR</button>,
-        <button onClick={handleSpec3}>CUSTOM ENGR</button>,
-        <button onClick={handleSpec4}>ELECTRICAL ENGR</button>,
-        <button onClick={handleSpec5}>ENVIRONMENTAL ENGR</button>,
-        <button onClick={handleSpec6}>MECHANICAL ENGR</button>,
-        <button onClick={handleSpec7}>CUSTOM COMSC</button>,
-        <button onClick={handleSpec8}>DATA SCIENCE COMSC</button>,
-        <button onClick={handleSpec9}>DIGITAL SYSTEMS COMSC</button>,
-        <button onClick={handleSpec10}>HUMAN CENTERED COMPUTING COMSC</button>,
-        <button onClick={handleSpec11}>INTELLIGENT AND AUTONOMOUS SYSTEMS COMSC</button>,
-        <button onClick={handleSpec12}>MATHEMATICS COMSC</button>,
-        <button onClick={handleSpec13}>NONE</button>
-      ]}
-    /> 
-     <form>
+     <form className='currentSchedule'>
           <h1>Load Current Schedule</h1>
           <input type="file" onChange={handleChange}/>
           <button type="submit">Upload</button>
-          <h3> OR </h3>
-      </form>
-      <form>
-        <h1>Create New Schedule</h1>
-        <button onClick={newTemplate}>Click Here</button>;
       </form>
 
+    <br />
+      <button className='save'>
+        Save
+      </button>
   </div>
   );
 }
-/*major dropdown*/
-const Dropdown = ({ trigger, menu }) => {
-  const [open, setOpen] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(!open);
-  };
-  return (
-    <div className="dropdown">
-      {React.cloneElement(trigger, {
-        onClick: handleOpen,
-      })}
-      {open ? (
-        <ul className="menu">
-          {menu.map((menuItem, index) => (
-            <li key={index} className="menu-item">
-              {React.cloneElement(menuItem, {
-                onClick: () => {
-                  menuItem.props.onClick();
-                  setOpen(false);
-                },
-              })}
-            </li>
-          ))}
-        </ul>
-      ) : null}
-    </div>
-  );
-};
-
-/*minor dropdown*/
-const Dropdown2 = ({ trigger2, minor }) => {
-  const [open2, setOpen] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(!open2);
-  };
-  return (
-    <div className="dropdown">
-      {React.cloneElement(trigger2, {
-        onClick: handleOpen,
-      })}
-      {open2 ? (
-        <ul className="minor">
-          {minor.map((minorItem, index) => (
-            <li key={index} className="minor-item">
-              {React.cloneElement(minorItem, {
-                onClick: () => {
-                  minorItem.props.onClick();
-                  setOpen(false);
-                },
-              })}
-            </li>
-          ))}
-        </ul>
-      ) : null}
-    </div>
-  );
-};
-
-/*core concentration dropdown*/
-const Dropdown3 = ({ trigger3, core }) => {
-  const [open3, setOpen] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(!open3);
-  };
-  return (
-    <div className="dropdown3">
-      {React.cloneElement(trigger3, {
-        onClick: handleOpen,
-      })}
-      {open3 ? (
-        <ul className="core">
-          {core.map((coreItem, index) => (
-            <li key={index} className="core-item">
-              {React.cloneElement(coreItem, {
-                onClick: () => {
-                  coreItem.props.onClick();
-                  setOpen(false);
-                },
-              })}
-            </li>
-          ))}
-        </ul>
-      ) : null}
-    </div>
-  );
-};
-
-/*specialization dropdown*/
-const Dropdown4 = ({ trigger4, spec }) => {
-  const [open4, setOpen] = React.useState(false);
-
-  const handleOpen = () => {
-    setOpen(!open4);
-  };
-  return (
-    <div className="dropdown4">
-      {React.cloneElement(trigger4, {
-        onClick: handleOpen,
-      })}
-      {open4 ? (
-        <ul className="spec">
-          {spec.map((specItem, index) => (
-            <li key={index} className="spec-item">
-              {React.cloneElement(specItem, {
-                onClick: () => {
-                  specItem.props.onClick();
-                  setOpen(false);
-                },
-              })}
-            </li>
-          ))}
-        </ul>
-      ) : null}
-    </div>
-  );
-};
 
 export default App;
