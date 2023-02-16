@@ -1,0 +1,81 @@
+/*app introduction layout*/
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 25vmin;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 13px;
+  }
+  
+  .App-header {
+    background-color: #ffffff;
+    top: 0px;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(25px + 2vmin);
+    color: rgb(0, 56, 101);
+  }
+  
+  .subheader {
+    color: #A4C8E1;
+    align-items: center;
+    top: 0px;
+    font-size: 50px;
+  }
+  
+  .dropdownHeader{
+    align-items: center;
+    top: 0px;
+    font-size: 30px;
+  }
+  
+  .description1{
+    align-items: center;
+    top: 0px;
+    font-size: 18px;
+  }
+  
+  .major{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .minor{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .core{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .spec{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .or{
+    color: rgb(0, 56, 101); 
+    align-items: center;
+    top: 0px;
+  }
+  
+  .currentSchedule{
+    color: rgb(0, 56, 101); 
+    align-items: center;
+    top: 0px;
+  }
+  
+  .save{
+    background-color: rgb(0, 56, 101);
+    color: #A4C8E1; 
+    align-items: center;
+    width: 80px;
+    font-size: 20px;
+  }

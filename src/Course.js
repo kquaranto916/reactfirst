@@ -1,18 +1,18 @@
 import logo from './rwulogo.png';
 import './Course.css';
 
-function Course() {
+const Course = () => {
   return (
     <div className="Course">
       <header className="Course-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>
-          Advising Assistant
+          Courses
         </h1>
       </header>
       <subheading className="subheader">
-            Welcome!
-        </subheading>
+            Plan Your Schedule Here!
+      </subheading>
   </div>
   );
 }
