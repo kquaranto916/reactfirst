@@ -1,8 +1,4 @@
-.Course {
-    text-align: center;
-  }
-  
-  .App-logo {
+.App-logo {
     height: 25vmin;
     pointer-events: none;
     position: absolute;
@@ -18,6 +14,7 @@
     justify-content: center;
     font-size: calc(25px + 2vmin);
     color: rgb(0, 56, 101);
+    text-align: center;
   }
   
   .subheader {
@@ -26,4 +23,32 @@
     top: 0px;
     font-size: 50px;
   }
+  
+  .Fall{
+    align-items: left;
+  }
+  .Spring{
+    align-items: right;
+  }
+
+.one-fa{
+    align-items: left;
+    height: 150px;
+    width: 180px;
+    background-color: aqua;
+    padding-left: 400px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+
+  .one-sp{
+    align-items: right;
+    height: 150px;
+    width: 180px;
+    background-color: green;
+    padding-right: 300px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+
   

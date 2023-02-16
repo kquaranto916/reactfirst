@@ -8,7 +8,7 @@ function TableRows({ rowsData, deleteTableRows, handleChange }) {
               type="text"
               value={courseName}
               onChange={(evnt) => handleChange(index, evnt)}
-              name="courseName"
+              courseName="courseName"
               className="form-control"
             />
           </td>

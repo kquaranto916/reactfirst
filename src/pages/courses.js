@@ -24,9 +24,9 @@ function Courses(){
   };
 
   const handleChange = (index, evnt) => {
-    const { name, value } = evnt.target;
+    const { courseName, value } = evnt.target;
     const rowsInput = [...rowsData];
-    rowsInput[index][name] = value;
+    rowsInput[index][courseName] = value;
     setRowsData(rowsInput);
   };
   const handleClick = () => {
@@ -54,15 +54,18 @@ return (
         Advising Assistant
       </h1>
     </header>
-    <div className="one-fa">
-<tr>
-<th>Year 1 Fall</th>
-</tr>
-<DragDropContext>
-<Droppable droppableid="droppable">
-{(provided) => (
-  <ul className="list"{...provided.droppableProps} ref={provided.innerRef}>
-    <li {...provided.droppableProps} {...provided.dragHandleProps}> 
+<div className="one-fa">
+
+<thead>
+  <tr className="Fall">
+    <th>Year 1 Fall</th>
+    </tr>
+    <th>Course</th>
+    <th>Credits</th>    
+</thead>
+
+
+
 <div className ='one'>
     <td>
       <input
@@ -111,11 +114,8 @@ return (
       />{" "}
     </td>  
 </div>
-</li>
-</ul>
-)}
-</Droppable>
-</DragDropContext>
+
+
 <th>
     <button className="btn btn-outline-success" onClick={addTableRows}>
         +
@@ -133,9 +133,16 @@ return (
 </div>
 
 <div className="one-sp">
-<tr>
-<th>Year 1 Spring</th>
-</tr>
+
+
+<thead>
+  <tr className="Spring">
+    <th>Year 1 Spring</th>
+    </tr>
+    <th>Course</th>
+    <th>Credits</th>    
+</thead>
+
 <div className ='oneSPR'>
     <td>
       <input
