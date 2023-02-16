@@ -1,8 +1,9 @@
+//NEED TO INSTALL npm install --save styled-components
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Nav = styled.nav`
-background: #ffb3ff;
+background: rgb(0, 56, 101);
 height: 85px;
 display: flex;
 justify-content: space-between;
@@ -11,7 +12,7 @@ z-index: 12;
 `;
 
 export const NavLink = styled(Link)`
-color: #808080;
+color: #A4C8E1;
 display: flex;
 align-items: center;
 text-decoration: none;
@@ -27,7 +28,7 @@ cursor: pointer;
 export const NavMenu = styled.div`
 display: flex;
 align-items: center;
-margin-right: -24px;
+margin-left: auto;
 /* Second Nav */
 /* margin-right: 24px; */
 /* Third Nav */

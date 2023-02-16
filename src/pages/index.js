@@ -125,10 +125,6 @@ return (
     </select>
   </div> 
 
-  <button className='save'>
-      Save
-  </button>
-
   <div className='or'>
     <h2>
       OR
