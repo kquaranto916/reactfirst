@@ -23,32 +23,41 @@
     top: 0px;
     font-size: 50px;
   }
-  
-  .Fall{
-    align-items: left;
-  }
-  .Spring{
-    align-items: right;
-  }
+
+.row1{
+  display: inline-block;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  height: auto;
+}
 
 .one-fa{
-    align-items: left;
-    height: 150px;
-    width: 180px;
-    background-color: aqua;
-    padding-left: 400px;
     padding-top: 50px;
     padding-bottom: 10px;
+    width: 100%;
+    padding-left: 35%;;
   }
 
-  .one-sp{
-    align-items: right;
-    height: 150px;
-    width: 180px;
-    background-color: green;
-    padding-right: 300px;
+.one-sp{
     padding-top: 50px;
     padding-bottom: 10px;
-  }
+}
 
+.Submit-btn{
+  align-items: right;
+  padding-left: 75%;
+  padding-bottom: 10%;
   
+}
+
+.Year{
+  font-size: 18px;
+  text-align: center;
+}
+.Fall{
+  text-align: center;
+}
+.Spring{
+  text-align:center;
+}
