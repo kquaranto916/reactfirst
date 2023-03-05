@@ -3,14 +3,14 @@
     text-align: center;
   }
   
-  .App-logo {
+.App-logo {   
     height: 25vmin;
     pointer-events: none;
     position: absolute;
     top: 0px;
     left: 0px;
     font-size: 13px;
-  }
+}
   
   .App-header {
     background-color: #ffffff;
@@ -19,8 +19,6 @@
     justify-content: center;
     font-size: calc(25px + 2vmin);
     color: rgb(0, 56, 101);
-    position: relative;
-    width:100%;
   }
   
   .subheader {

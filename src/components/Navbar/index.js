@@ -7,6 +7,9 @@ return (
 	<>
 	<Nav>
 		<NavMenu>
+		<NavLink to="/reactfirst/src/pages/index.js" activeStyle>
+			Home
+		</NavLink>
 		<NavLink to="/courses" activeStyle>
 			Courses
 		</NavLink>
