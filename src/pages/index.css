@@ -19,6 +19,8 @@
     justify-content: center;
     font-size: calc(25px + 2vmin);
     color: rgb(0, 56, 101);
+    position: relative;
+    width:100%;
   }
   
   .subheader {

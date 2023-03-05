@@ -18,9 +18,16 @@ xlsxFile('./src/Requirements.xlsx', {sheet: major})
 
         } else {
             if (cell != null){
+              if (cell.includes(",")){
                 //if it has data validation create with drop down in semester i
-
+                cell.split(",");
+                
+              } else {
                 //else create drag and drop object in semester i
+              }
+                
+
+            
                 
             }
             
