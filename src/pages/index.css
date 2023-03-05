@@ -24,6 +24,7 @@
   .subheader {
     color: #A4C8E1;
     align-items: center;
+    position: relative;
     top: 0px;
     font-size: 50px;
   }
