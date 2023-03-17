@@ -13,6 +13,9 @@ return (
 		<NavLink to="/courses" activeStyle>
 			Courses
 		</NavLink>
+		<NavLink to="/test" activeStyle>
+			Test
+		</NavLink>
 		</NavMenu>
 	</Nav>
 	</>
