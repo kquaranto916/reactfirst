@@ -1,16 +1,19 @@
 import React from "react";
 import logo from './rwulogo.png';
+import download from './download.png';
 import './Courses.css';
 import { useState, useEffect } from "react";
 import TableRows from "./TableRows.js";
 import './Row.css';
 import { utils, writeFile } from "xlsx";
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 //https://www.youtube.com/watch?v=F7dQLO5Jhp4
 
 function Courses() {
   const [rowsData, setRowsData] = useState([]);
 
+  //add 'course' to table 
   const addTableRows_one = () => {
     const rowsInput = {
       fullName: "",
@@ -26,6 +29,7 @@ function Courses() {
     setRowsData([...rowsData, rowsInput]);
   };
 
+  //deletes previous course added, 4 courses are required 
   const deleteTableRows = (index) => {
     const rows = [...rowsData];
     rows.splice(index, 1);
@@ -39,6 +43,7 @@ function Courses() {
     rowsInput[index][courseName] = value;
     setRowsData(rowsInput);
   };
+  //downloads to excel 
   const handleClick = () => {
     console.log("Submitted", rowsData);
     //rowsData has table info as object array
@@ -54,7 +59,6 @@ function Courses() {
     req.open("POST", `http://localhost:8000/upload`, true);
     req.send(fd);
   };
-
 
   return (
     <div className="Course">
@@ -72,11 +76,10 @@ function Courses() {
           <thead>
             <div className="Fall">
               <tr>Fall</tr>
-              <th>Course</th>
+              <th>Course&nbsp;</th>
               <th>Credits</th>
             </div>
           </thead>
-
           <div className='one'>
             <td>
               <input
@@ -146,7 +149,7 @@ function Courses() {
           <thead>
             <div className="Spring">
               <tr>Spring</tr>
-              <th>Course</th>
+              <th>Course&nbsp;</th>
               <th>Credits</th>
             </div>
 
@@ -216,7 +219,7 @@ function Courses() {
           <thead>
             <div className="Fall">
               <tr>Fall</tr>
-              <th>Course</th>
+              <th>Course&nbsp;</th>
               <th>Credits</th>
             </div>
           </thead>
@@ -289,7 +292,7 @@ function Courses() {
           <thead>
             <div className="Spring">
               <tr>Spring</tr>
-              <th>Course</th>
+              <th>Course&nbsp;</th>
               <th>Credits</th>
             </div>
 
@@ -361,7 +364,7 @@ function Courses() {
           <thead>
             <div className="Fall">
               <tr>Fall</tr>
-              <th>Course</th>
+              <th>Course &nbsp;</th>
               <th>Credits</th>
             </div>
           </thead>
@@ -436,7 +439,7 @@ function Courses() {
           <thead>
             <div className="Spring">
               <tr>Spring</tr>
-              <th>Course</th>
+              <th>Course&nbsp;</th>
               <th>Credits</th>
             </div>
           </thead>
@@ -505,7 +508,7 @@ function Courses() {
           <thead>
             <div className="Fall">
               <tr>Fall</tr>
-              <th>Course</th>
+              <th>Course&nbsp;</th>
               <th>Credits</th>
             </div>
           </thead>
@@ -587,7 +590,7 @@ function Courses() {
           <thead>
             <div className="Spring">
               <tr>Spring</tr>
-              <th>Course</th>
+              <th>Course&nbsp;</th>
               <th>Credits</th>
             </div>
 
@@ -630,32 +633,33 @@ function Courses() {
             </td>
           </div>
           <div className="four-sp">
+            <table id='Courses'>
             <td>
-              <input
-                type="text"
-                placeholder="comsc 110"
-                //value={courseName}
-                //onChange={(evnt) => handleChange(index, evnt)}
-                name="salary"
-                className="form-control"
-              />{" "}
+              <th>comsc 100</th>
             </td>
-
+            </table>
           </div>
           <th>
             <button className="btn btn-add-two" onClick={addTableRows_two}>
               +
             </button>
           </th>
+          
         </div>
       </div>
-
+      <ReactHTMLTableToExcel 
+      className='Submit'
+      table='Courses'
+      filename='Course Schedule'
+      sheet='Sheet'
+      buttonText='Download'
+      />
       <span className="Submit-btn">
         <button onClick={handleClick} className="btnSubmit">
-          Submit
+          Submit      
+          <img src={download} className="btn-download" alt="download" height='40px' width='40px'/>
         </button>
       </span>
-
     </div>
   );
 

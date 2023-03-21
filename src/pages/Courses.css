@@ -1,3 +1,4 @@
+
 .App-logo {
     height: 25vmin;
     pointer-events: none;
@@ -33,14 +34,14 @@
 }
 
 .one-fa{
-    padding-top: 50px;
+    padding-top: 5px;
     padding-bottom: 10px;
     width: 100%;
     padding-left: 35%;;
   }
 
 .one-sp{
-    padding-top: 50px;
+    padding-top: 5px;
     padding-bottom: 10px;
 }
 
@@ -54,7 +55,12 @@
 .Year{
   font-size: 18px;
   text-align: center;
+  margin: 0;
+  width:100%;
+  display: inline-block;
+  height: auto;
 }
+
 .Fall{
   text-align: center;
 }
