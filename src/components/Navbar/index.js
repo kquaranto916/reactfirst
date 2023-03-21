@@ -7,11 +7,11 @@ return (
 	<>
 	<Nav>
 		<NavMenu>
-		<NavLink to="/reactfirst/src/pages/index.js" activeStyle>
+		<NavLink to="/" activeStyle>
 			Home
 		</NavLink>
 		<NavLink to="/courses" activeStyle>
-			Courses
+			Save
 		</NavLink>
 		</NavMenu>
 	</Nav>
