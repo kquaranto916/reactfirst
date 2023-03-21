@@ -13,6 +13,9 @@ return (
 		<NavLink to="/courses" activeStyle>
 			Save
 		</NavLink>
+		<NavLink to = "/courses" activeStyle> 
+			Upload
+		</NavLink>
 		</NavMenu>
 	</Nav>
 	</>

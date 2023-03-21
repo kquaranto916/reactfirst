@@ -133,6 +133,9 @@ return (
 
    <form className='currentSchedule'>
         <h1>Load Current Schedule</h1>
+        <p className='description2'>
+        Click "Choose file" to upload previously saved file to continue editing and press "Upload" in the top right corner of the screen 
+        </p>
         <input type="file" onChange={handleChange}/>
         <button type="submit">Upload</button>
     </form>

@@ -72,6 +72,11 @@
     align-items: center;
     top: 0px;
   }
+  .description2{
+    align-items: center;
+    top: 0px;
+    font-size: 18px;
+  }
   
   .save{
     background-color: rgb(0, 56, 101);
