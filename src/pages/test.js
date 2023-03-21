@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import initialData from './initial-data';
 import importExcel from './importExcel';
 import logo from './rwulogo.png';
@@ -25,19 +25,7 @@ class App extends React.Component {
     }
 }
 
-return (
-    <div className="Course">
-      <header className="Course-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-          Advising Assistant
-        </h1>
-        </header>
-    </div>
-);
 
+ReactDOM.createRoot(document.getElementById('root')).render(<App tab = 'Test'/>)
 
-
-ReactDOM.render(<App />, document.getElementById('root'));
-export default Test;
 
