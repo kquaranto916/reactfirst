@@ -647,19 +647,19 @@ function Courses() {
           
         </div>
       </div>
+      <div className="Submit-btn">
       <ReactHTMLTableToExcel 
-      className='Submit'
+      className='btnSubmit'
       table='Courses'
       filename='Course Schedule'
       sheet='Sheet'
-      buttonText='Download'
-      />
-      <span className="Submit-btn">
-        <button onClick={handleClick} className="btnSubmit">
-          Submit      
-          <img src={download} className="btn-download" alt="download" height='40px' width='40px'/>
-        </button>
-      </span>
+      buttonText='Submit'
+      />      
+      <img src={download} alt="download" height='40px' width='40px'/>
+
+      </div>
+
+      
     </div>
   );
 
