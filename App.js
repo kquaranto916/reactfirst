@@ -1,7 +1,6 @@
 import logo from './rwulogo.png';
 import './App.css';
-import React from 'react';
-
+import React from 'react'
 const App = () => {
   /*opens major dropdown*/
   const [open, setOpen] = React.useState(false);

@@ -44,6 +44,7 @@ function handleChange(event) {
 }
 
 /*implements the heading and main layout of the website*/
+
 return (
 <div className="App">
   <header className="App-header">  
@@ -145,4 +146,33 @@ return (
 );
 };
 
-export default Home;
+
+//new save functions
+/*this code is using controlled instead of uncontrolled components
+in order to print out the values for clicked dropdown values.
+Still needs to write console log or handlechange to a variable
+if variable == COMSC BS -> import this excel sheet
+*/
+
+export default class App extends React.Component {
+    constructor() {  
+     super();  
+     this.state = {selectValue: ''};  // initial state value
+  }  
+
+  // Handles state change
+  handleChange = (event) => {
+    this.setState({selectValue: event.target.value}, ()=> {alert(`Value: ${this.state.selectValue}`)});
+    } 
+
+  render() {
+    return (
+      <select onChange={this.handleChange}  id="major">
+        <option value="COMSC BA">COMSC BA</option>
+        <option value="COMSC BS">COMSC BS</option>
+        <option value="MATH">MATH</option>
+      </select>
+    );
+  }
+}
+//export default Home;

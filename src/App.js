@@ -6,9 +6,7 @@ import { BrowserRouter as Router, Routes, Route}
 import Home from './pages';
 import Courses from './pages/courses';
 //save function new elements
-import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app.js';
 
 ReactDOM.render(
   <App />, 
