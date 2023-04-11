@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from './RWUlogo.png';
+import logo from './rwulogo.png';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import initialData from './initial-data';
+import initialDataCSBA from './initial-data-CSBA';
 import Column from './columns';
 import './Courses.css';
 import { DragDropContext } from 'react-beautiful-dnd';
@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 const Courses1 = () => {
 class App extends React.Component {
-    state = initialData;
+    state = initialDataCSBA;
 
   onDragEnd = result => {
     const {destination, source, draggableId} = result;
