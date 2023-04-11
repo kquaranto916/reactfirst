@@ -10,10 +10,10 @@ return (
 		<NavLink to="/" activeStyle>
 			Home
 		</NavLink>
-		<NavLink to="/courses" activeStyle>
+		<NavLink to="/CourseNew" activeStyle>
 			Save
 		</NavLink>
-		<NavLink to = "/courses" activeStyle> 
+		<NavLink to = "/CourseNew" activeStyle> 
 			Upload
 		</NavLink>
 		</NavMenu>

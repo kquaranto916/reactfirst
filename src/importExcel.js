@@ -1,6 +1,7 @@
 //This should be able to import excel files so that they can be read through and create objects from
 //type nmd install read-excel-file if need be
 // for now the function just prints to the command line until later use
+
 function importExcel(major){
 
 const xlsxFile = require('read-excel-file/node');
@@ -25,18 +26,7 @@ xlsxFile('./src/Requirements.xlsx', {sheet: major})
               } else {
                 //else create drag and drop object in semester i
               }
-                
-
-            
-                
             }
-            
-
-            //increment i so that obbjects are put in correct semester
-            i++;
-            //reset i at semester max so it goes back to beginning 
-            if (i > semesterCount)
-                i = 0;
         }
         
         
