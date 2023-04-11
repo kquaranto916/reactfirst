@@ -90,9 +90,6 @@ class App extends React.Component {
             Advising Assistant
           </h1>
         </header>
-        <div className="Year">
-          <h2>Year 1</h2>
-        </div>
       <DragDropContext onDragEnd = {this.onDragEnd}>
         <Container>
       {this.state.columnOrder.map(columnId => {
@@ -107,7 +104,8 @@ class App extends React.Component {
     );
   }
  }
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+//ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(<App />, document.getElementById('root'));
-}
+};
 export default Courses1;
