@@ -1,5 +1,5 @@
 import React from "react";
-import logo from './rwulogo.png';
+import logo from './RWUlogo.png';
 import download from './download.png';
 import './Courses.css';
 import { useState, useEffect } from "react";

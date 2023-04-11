@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from './RWUlogo.png';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import initialData from './initial-data';
@@ -82,6 +83,16 @@ class App extends React.Component {
 
   render() {
     return (
+        <div className="Course">
+        <header className="Course-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1>
+            Advising Assistant
+          </h1>
+        </header>
+        <div className="Year">
+          <h2>Year 1</h2>
+        </div>
       <DragDropContext onDragEnd = {this.onDragEnd}>
         <Container>
       {this.state.columnOrder.map(columnId => {
@@ -92,6 +103,7 @@ class App extends React.Component {
     })}
     </Container>
     </DragDropContext>
+    </div>
     );
   }
  }
