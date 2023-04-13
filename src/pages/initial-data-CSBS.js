@@ -21,7 +21,7 @@ const initialDataCSBS = {
         'task-16': {id: 'task-16', content: 'COMSC 340 - Analysis of Algorithms'},
         'task-17': {id: 'task-17', content: 'MATH 315 - Probability and Statistics'},
         'task-18': {id: 'task-18', content: 'Science Choice'},
-        'task-39': {id: 'task-39', content: 'COMSC Choice'},
+        'task-39': {id: 'task-18b', content: 'COMSC Choice'},
        
         'task-19': {id: 'task-19', content: 'COMSC 335 - Theory of Computation'},
         'task-20': {id: 'task-20', content: 'COMSC 390 - Principles of Secure Programming'},
@@ -51,7 +51,7 @@ const initialDataCSBS = {
         'column-1': {id: 'column-1', title: '1st Fall Semester', taskIds: ['task-1','task-2','task-3', 'task-4']},
         'column-2': {id: 'column-2',  title: '1st Spring Semester',taskIds: ['task-5','task-6','task-7','task-8','task-9']},
         'column-3': {id: 'column-3',  title: '2nd Fall Semester',taskIds: ['task-10','task-11','task-12','task-13','task-14']},
-        'column-4': {id: 'column-4',  title: '2nd Spring Semester',taskIds: ['task-15','task-16','task-17','task-18', 'task-39']},
+        'column-4': {id: 'column-4',  title: '2nd Spring Semester',taskIds: ['task-15','task-16','task-17','task-18', 'task-18b']},
         'column-5': {id: 'column-5', title: '3rd Fall Semester', taskIds: ['task-19','task-20','task-21', 'task-22', 'task-23']},
         'column-6': {id: 'column-6',  title: '3rd Spring Semester',taskIds: ['task-24','task-25','task-26','task-27','task-28']},
         'column-7': {id: 'column-7',  title: '4th Fall Semester',taskIds: ['task-29','task-30','task-31','task-32','task-33']},
