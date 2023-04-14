@@ -2,13 +2,18 @@ import React from 'react';
 import logo from './RWUlogo.png';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import initialData from './initial-data';
+import initialData from './initial-data-CSBS';
 import Column from './columns';
 import './Courses.css';
 import { DragDropContext } from 'react-beautiful-dnd';
 
 const Container = styled.div`
-  display: flex;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  width: 40%;
+  padding-left: 30%;
+  display: inline-block;
+  align-items: center;
 `;
 const Courses1 = () => {
 class App extends React.Component {
@@ -101,6 +106,7 @@ class App extends React.Component {
     </Container>
     </DragDropContext>
     </div>
+    
     );
   }
  }
