@@ -236,7 +236,6 @@ export default class App extends React.Component {
             <option value="NONE">NONE</option>
           </select>
         </div>
-
       </div>
     );
   }
