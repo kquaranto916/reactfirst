@@ -167,11 +167,30 @@ export default class App extends React.Component {
 
   render() {
     return (
+      <div className="App">
+        <header className="App-header">  
+        <img src={logo} className="App-logo" alt="logo"/>
+          <h1>
+            Advising Assistant
+          </h1>
+        <header>
+          <subheading className="subheader">
+            Welcome!
+          </subheading>
+        </header>
+        <header>
+          <p className='description1'>
+            Fill in the dropdown boxes below with the appropriate information and then press save to create a new schedule!
+          </p>
+    </header>
+        </header>
       <select onChange={this.handleChange}  id="major">
         <option value="COMSC BA">COMSC BA</option>
         <option value="COMSC BS">COMSC BS</option>
-        <option value="MATH">MATH</option>
+        <option value="CM">CM</option>
+        <option value="ENGR">ENGR</option>
       </select>
+      </div>
     );
   }
 }
