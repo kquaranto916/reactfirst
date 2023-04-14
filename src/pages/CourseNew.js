@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './RWUlogo.png';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import initialData from './initial-data-CSBS';
+import initialData from './initial-data';
 import Column from './columns';
 import './Courses.css';
 import { DragDropContext } from 'react-beautiful-dnd';
@@ -17,15 +17,18 @@ const Container = styled.div`
 `;
 const Courses1 = () => {
 class App extends React.Component {
-    state = initialData;
+    //This is where we state the initial state from the 4 majors
+    state = initialDataCSBA;
 
   onDragEnd = result => {
     const {destination, source, draggableId} = result;
   
+    // if the drog location isn't a droppable, don't change anything
     if (!destination) {
       return;
     }
 
+    /// if the drag location is the same droppable and same index, don't change anything
     if (
       destination.droppableId === source.droppableId && 
       destination.index === source.index) {
@@ -35,6 +38,7 @@ class App extends React.Component {
     const start = this.state.columns[source.droppableId];
     const finish = this.state.columns[destination.droppableId];
 
+    //if the drag ends in the same droppable, but different index, change the index
     if(start === finish){
 
     const newTaskIds = Array.from(start.taskIds);
@@ -59,7 +63,7 @@ class App extends React.Component {
     return;
     } 
 
-    //Moving from one list to another
+    //Moving from one droppable to another
     const startTaskIds = Array.from(start.taskIds);
     startTaskIds.splice(source.index, 1);
     const newStart = {
