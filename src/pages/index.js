@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import logo from './rwulogo.png';
+import logo from './RWUlogo.png';
 import './index.css';
+import { Confetti } from 'react-dom-confetti';
+
 
 const Home = () => {
     
@@ -56,6 +58,15 @@ return (
           Welcome!
       </subheading>
     </header>
+
+    <Confetti
+      size={8}
+      shape="circle"
+      colors={['#f44336', '#9c27b0', '#3f51b5']}
+      wind={0.1}
+      gravity={0.2}
+    />
+
 
     <header>
       <h1 className="dropdownHeader">
