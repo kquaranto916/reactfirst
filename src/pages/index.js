@@ -182,14 +182,61 @@ export default class App extends React.Component {
           <p className='description1'>
             Fill in the dropdown boxes below with the appropriate information and then press save to create a new schedule!
           </p>
-    </header>
         </header>
-      <select onChange={this.handleChange}  id="major">
-        <option value="COMSC BA">COMSC BA</option>
-        <option value="COMSC BS">COMSC BS</option>
-        <option value="CM">CM</option>
-        <option value="ENGR">ENGR</option>
-      </select>
+        </header>
+
+        <div className='major'>
+          <select onChange={this.handleChange}  id="major">
+          <option value="Select Major">Select Major</option>
+            <option value="COMSC BA">COMSC BA</option>
+            <option value="COMSC BS">COMSC BS</option>
+            <option value="CM">CM</option>
+            <option value="ENGR">ENGR</option>
+          </select>
+        </div>
+
+        <div className='minor'>
+          <select onChange={this.handleChange}  id="minor">
+            <option value="Select Minor">Select Minor</option>
+            <option value="MATH">MATH</option>
+            <option value="COMSC">COMSC</option>
+            <option value="MANAGEMENT">MANAGEMENT</option>
+            <option value="CM">CM</option>
+            <option value="BIOMECHANICS">BIOMECHANICS</option>
+            <option value="ENVIRONMENTAL ENGR">ENVIRONMENTAL ENGR</option>
+            <option value="ROBOTICS">ROBOTICS</option>
+            <option value="STRUCTURAL ENGR">STRUCTURAL ENGR</option>
+            <option value="BUSINESS ANALYTICS">BUSINESS ANALYTICS</option>
+          </select>
+        </div>
+        
+        <div className='core'>
+          <select onChange={this.handleChange}  id="core">
+            <option value="Select Core Concentration">Select Core Concentration</option>
+            <option value="COMSC">COMSC</option>
+            <option value="MATH">MATH</option>
+            <option value="NONE">NONE</option>
+          </select>
+        </div>
+        
+        <div className='spec'>
+          <select onChange={this.handleChange}  id="spec">
+            <option value="Select Specialization">Select Specialization</option>
+            <option value="CIVIL ENGR">CIVIL ENGR</option>
+            <option value="COMPUTER ENGR">COMPUTER ENGR</option>
+            <option value="CUSTOM ENGR">CUSTOM ENGR</option>
+            <option value="ELECTRICAL ENGR">ELECTRICAL ENGR</option>
+            <option value="ENVIRONMENTAL ENGR">ENVIRONMENTAL ENGR</option>
+            <option value="MECHANICAL ENGR">MECHANICAL ENGR</option>
+            <option value="CUSTOM COMSC">CUSTOM COMSC</option>
+            <option value="DATA SCIENCE COMSC">DATA SCIENCE COMSC</option>
+            <option value="DIGITAL SYSTEMS COMSC">DIGITAL SYSTEMS COMSC</option>
+            <option value="HUMAN CENTERED COMPUTING COMSC">HUMAN CENTERED COMPUTING COMSC</option>
+            <option value="MATHEMATICS COMSC">MATHEMATICS COMSC</option>
+            <option value="NONE">NONE</option>
+          </select>
+        </div>
+
       </div>
     );
   }
