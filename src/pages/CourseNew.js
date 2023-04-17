@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './RWUlogo.png';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import initialData from './initial-data';
+import initialData from './initial-data-CSBA';
 import Column from './columns';
 import './Courses.css';
 import { DragDropContext } from 'react-beautiful-dnd';
@@ -18,7 +18,7 @@ const Container = styled.div`
 const Courses1 = () => {
 class App extends React.Component {
     //This is where we state the initial state from the 4 majors
-    state = initialDataCSBA;
+    state = initialData;
 
   onDragEnd = result => {
     const {destination, source, draggableId} = result;
