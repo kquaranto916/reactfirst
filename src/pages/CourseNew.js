@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from './RWUlogo.png';
+import './Courses.css';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import initialData from './initial-data';
+import initialData from './initial-data-CSBA';
+//import initialDataCSBS from './initial-data-CSBS';
 import Column from './columns';
-import './Courses.css';
 import { DragDropContext } from 'react-beautiful-dnd';
 
 const Container = styled.div`
@@ -15,10 +16,10 @@ const Container = styled.div`
   display: inline-block;
   align-items: center;
 `;
-const Courses1 = () => {
+function Courses1(){
 class App extends React.Component {
     //This is where we state the initial state from the 4 majors
-    state = initialDataCSBA;
+    state = initialData;
 
   onDragEnd = result => {
     const {destination, source, draggableId} = result;
@@ -92,7 +93,7 @@ class App extends React.Component {
 
   render() {
     return (
-        <div className="Course">
+      <div className="Course">
         <header className="Course-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1>
@@ -107,15 +108,17 @@ class App extends React.Component {
 
       return <Column key = {column.id} column = {column} tasks = {tasks} />;
     })}
-    </Container>
-    </DragDropContext>
-    </div>
+        </Container>
+      </DragDropContext>
+      </div>
     
     );
   }
  }
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+ ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
 //ReactDOM.render(<App />, document.getElementById('root'));
 
 };
 export default Courses1;
+
