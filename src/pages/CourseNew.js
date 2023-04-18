@@ -6,6 +6,8 @@ import initialData from './initial-data-CSBA';
 import Column from './columns';
 import './Courses.css';
 import { DragDropContext } from 'react-beautiful-dnd';
+import ReactConfetti from 'react-confetti';
+import {useEffect, useState} from 'react';
 
 const Container = styled.div`
   padding-top: 5px;
@@ -16,6 +18,25 @@ const Container = styled.div`
   align-items: center;
 `;
 const Courses1 = () => {
+
+//confetti 
+const [windowDim, setDim] = useState({width: window.innerWidth, height:window.innerHeight});
+const detectSize=()=>{
+  setDim({width: window.innerWidth, height: window.innerHeight});
+}
+
+useEffect(()=>{
+    window.addEventListener('resize', detectSize);
+    return()=>{
+        window.removeEventListener('resize', detectSize);
+    }
+}, [windowDim]);
+
+const [Btn, setBtn] = useState(false);
+
+//confetti
+
+
 class App extends React.Component {
     //This is where we state the initial state from the 4 majors
     state = initialData;
@@ -99,6 +120,23 @@ class App extends React.Component {
             Advising Assistant
           </h1>
         </header>
+
+{/*confetti*/}
+<div className='confetti'>
+        <button onClick={()=> setBtn(!Btn)}>Download!</button>
+        {Btn && 
+    <ReactConfetti
+        height={windowDim.height}
+        width={windowDim.width}
+        />}
+    </div>
+{/*confetti*/}
+
+
+
+
+
+
       <DragDropContext onDragEnd = {this.onDragEnd}>
         <Container>
       {this.state.columnOrder.map(columnId => {
