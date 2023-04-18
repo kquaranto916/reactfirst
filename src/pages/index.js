@@ -240,6 +240,11 @@ const Home = () => {
               <option value="NONE">NONE</option>
             </select>
           </div>
+          <div className='or'>
+            <h2>
+              OR
+            </h2>
+          </div>
         <form className='currentSchedule'>
           <h1>Load Current Schedule</h1>
           <p className='description2'>
