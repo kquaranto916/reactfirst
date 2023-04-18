@@ -164,6 +164,10 @@ const Home = () => {
     handleChange = (event) => {
       this.setState({selectValue: event.target.value}, ()=> {alert(`Value: ${this.state.selectValue}`)});
       } 
+    handleChange1 = (event) => {
+      this.setState({selectValue: event.target.files[0]}, ()=> {alert(`Value: ${this.state.selectValue}`)});
+    }
+    
 
     render() {
       return (
@@ -236,6 +240,13 @@ const Home = () => {
               <option value="NONE">NONE</option>
             </select>
           </div>
+        <form className='currentSchedule'>
+          <h1>Load Current Schedule</h1>
+          <p className='description2'>
+          Click "Choose file" to upload previously saved file to continue editing and press "Upload" in the top right corner of the screen 
+          </p>
+          <input type="file" onChange={this.handleChange1}/>
+        </form>
         </div>
       );
     }
