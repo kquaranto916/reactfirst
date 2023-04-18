@@ -17,7 +17,7 @@ const Container = styled.div`
   display: inline-block;
   align-items: center;
 `;
-const Courses1 = () =>{
+/*const Courses1 = () =>{
 
 //confetti 
 const [windowDim, setDim] = useState({width: window.innerWidth, height:window.innerHeight});
@@ -35,7 +35,7 @@ useEffect(()=>{
 const [Btn, setBtn] = useState(false);
 
 //confetti
-
+*/
 export default class App extends React.Component {
     //This is where we state the initial state from the 4 majors
     state = initialData;
@@ -109,7 +109,6 @@ export default class App extends React.Component {
 
     this.setState(newState);
   };
-  
 
   render() {
     return (
@@ -120,16 +119,7 @@ export default class App extends React.Component {
             Advising Assistant
           </h1>
         </header>
-      {/*confetti
-      <div className='confetti'>
-        <button onClick={()=> setBtn(!Btn)}>Download!</button>
-        {Btn && 
-        <ReactConfetti
-        height={windowDim.height}
-        width={windowDim.width}
-        />}
-    </div>
-    {/*confetti*/}
+      
       <DragDropContext onDragEnd = {this.onDragEnd}>
         <Container>
       {this.state.columnOrder.map(columnId => {
