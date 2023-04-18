@@ -35,7 +35,8 @@ useEffect(()=>{
 const [Btn, setBtn] = useState(false);
 
 //confetti
-class App extends React.Component {
+
+export default class App extends React.Component {
     //This is where we state the initial state from the 4 majors
     state = initialData;
 
@@ -108,6 +109,7 @@ class App extends React.Component {
 
     this.setState(newState);
   };
+  
 
   render() {
     return (
@@ -118,7 +120,7 @@ class App extends React.Component {
             Advising Assistant
           </h1>
         </header>
-      {/*confetti*/}
+      {/*confetti
       <div className='confetti'>
         <button onClick={()=> setBtn(!Btn)}>Download!</button>
         {Btn && 
@@ -147,6 +149,6 @@ class App extends React.Component {
 
 //ReactDOM.render(<App />, document.getElementById('root'));
 
-};
-export default Courses1;
+//};
+//export default Courses1;
 
