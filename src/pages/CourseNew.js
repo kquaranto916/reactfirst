@@ -3,8 +3,7 @@ import logo from './RWUlogo.png';
 import './Courses.css';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import initialData from './initial-data-CSBA';
-//import initialDataCSBS from './initial-data-CSBS';
+import initialData from './initial-data';
 import Column from './columns';
 import { DragDropContext } from 'react-beautiful-dnd';
 

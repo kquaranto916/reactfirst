@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import logo from './RWUlogo.png';
 import './index.css';
-//import { Confetti } from 'react-dom-confetti';
+import { Confetti } from 'react-dom-confetti';
+
 
 const Home = () => {
     
@@ -58,7 +59,13 @@ return (
       </subheading>
     </header>
 
-    
+    <Confetti
+      size={8}
+      shape="circle"
+      colors={['#f44336', '#9c27b0', '#3f51b5']}
+      wind={0.1}
+      gravity={0.2}
+    />
 
 
     <header>
@@ -148,5 +155,5 @@ return (
 </div>
 );
 };
- 
+   
 export default Home;
