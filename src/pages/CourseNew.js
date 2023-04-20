@@ -1,13 +1,16 @@
 import React from 'react';
 import logo from './RWUlogo.png';
-import './Courses.css';
+import logo2 from './AdvA.png';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import initialData from './initial-data-CSBA';
 import Column from './columns';
+import './Courses.css';
 import { DragDropContext } from 'react-beautiful-dnd';
 import ReactConfetti from 'react-confetti';
 import {useEffect, useState} from 'react';
+import {useNavigate} from "react-router";
+import {BrowserRouter as Router} from 'react-router-dom';
 
 const Container = styled.div`
   padding-top: 5px;
@@ -17,7 +20,13 @@ const Container = styled.div`
   display: inline-block;
   align-items: center;
 `;
-const Courses1 = () =>{
+const Courses1 = () => {
+
+  const navigate = useNavigate();
+  const handleClick = () => {
+    // 👇️ navigate programmatically
+    navigate('/');    
+  }
 
 //confetti 
 const [windowDim, setDim] = useState({width: window.innerWidth, height:window.innerHeight});
@@ -35,6 +44,8 @@ useEffect(()=>{
 const [Btn, setBtn] = useState(false);
 
 //confetti
+
+
 class App extends React.Component {
     //This is where we state the initial state from the 4 majors
     state = initialData;
@@ -111,23 +122,27 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="Course">
+        <div className="Course">
+          <header className='header'></header>
         <header className="Course-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1>
-            Advising Assistant
+          <img src={logo2} className="AdvA-logo" alt="logo2" />
           </h1>
         </header>
-      {/*confetti*/}
-      <div className='confetti'>
-        <button onClick={()=> setBtn(!Btn)}>Download!</button>
+{/*confetti*/}
+<div className='confetti'>
+        <button className='Btn-Con' onClick={()=> setBtn(!Btn)}>Download!</button>
         {Btn && 
-        <ReactConfetti
+    <ReactConfetti
         height={windowDim.height}
         width={windowDim.width}
         />}
-    </div>
-    {/*confetti*/}
+    {/*resetBTN*/}    
+    <button className='Btn-Reset' onClick={() => navigate(0)}>Reset Schedule</button>
+    </div>      
+{/*confetti*/}
+
       <DragDropContext onDragEnd = {this.onDragEnd}>
         <Container>
       {this.state.columnOrder.map(columnId => {
@@ -136,17 +151,15 @@ class App extends React.Component {
 
       return <Column key = {column.id} column = {column} tasks = {tasks} />;
     })}
-        </Container>
-      </DragDropContext>
-      </div>
+    </Container>
+    </DragDropContext>
+    </div>
     
     );
   }
  }
- ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 //ReactDOM.render(<App />, document.getElementById('root'));
 
 };
 export default Courses1;
-

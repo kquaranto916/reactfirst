@@ -11,6 +11,7 @@ padding: 0.2rem calc((100vw - 1000px) / 2);
 z-index: 12;
 `;
 
+
 export const NavLink = styled(Link)`
 color: #A4C8E1;
 display: flex;

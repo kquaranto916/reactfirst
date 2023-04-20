@@ -7,10 +7,24 @@
     left: 0px;
     font-size: 13px;
   }
+
+  .AdvA-logo{
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+  }
+
+  .header{
+      padding: 93px;
+      text-align: center;
+      background: rgb(0, 56, 101);
+      color: white;
+      font-size: 30px;
+  }
   
   .Course-header {
     background-color: #ffffff;
-    top: 0px;
     align-items: center;
     justify-content: center;
     font-size: calc(25px + 2vmin);
@@ -80,4 +94,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.confetti{
+  position: relative;
+  padding-left: 20px;
+}
+
+.Btn-Con{
+  
+}
+
+.Btn-Reset{
+  
 }
