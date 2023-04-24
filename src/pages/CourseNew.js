@@ -7,10 +7,15 @@ import initialData from './initial-data-CSBA';
 import Column from './columns';
 import './Courses.css';
 import { DragDropContext } from 'react-beautiful-dnd';
+<<<<<<< Updated upstream
 import ReactConfetti from 'react-confetti';
 import {useEffect, useState} from 'react';
 import {useNavigate} from "react-router";
 import {BrowserRouter as Router} from 'react-router-dom';
+=======
+import {useEffect, useState} from 'react'; //CONFETTI
+import ReactConfetti from 'react-confetti'; //CONFETTI
+>>>>>>> Stashed changes
 
 const Container = styled.div`
   padding-top: 5px;
@@ -21,6 +26,7 @@ const Container = styled.div`
   align-items: center;
 `;
 const Courses1 = () => {
+<<<<<<< Updated upstream
 
   const navigate = useNavigate();
   const handleClick = () => {
@@ -44,6 +50,27 @@ useEffect(()=>{
 const [Btn, setBtn] = useState(false);
 
 //confetti
+=======
+ //confetti 
+ const [windowDim, setDim] = useState({width: window.innerWidth, height:window.innerHeight});
+ const detectSize=()=>{
+   setDim({width: window.innerWidth, height: window.innerHeight});
+ }
+ 
+ useEffect(()=>{
+     window.addEventListener('resize', detectSize);
+     return()=>{
+         window.removeEventListener('resize', detectSize);
+     }
+ }, [windowDim]);
+
+ const [Btn, setBtn] = useState(false);
+ 
+ //confetti
+
+
+
+>>>>>>> Stashed changes
 
 
 class App extends React.Component {
@@ -143,6 +170,21 @@ class App extends React.Component {
           <img src={logo2} className="AdvA-logo" alt="logo2" />
           </h1>
         </header>
+
+{/*confetti*/}
+<div className='confetti'>
+        <button onClick={()=> setBtn(!Btn)}>Download!</button>
+        {Btn && 
+    <ReactConfetti
+        height={windowDim.height}
+        width={windowDim.width}
+        />}
+    </div>
+{/*confetti*/}
+
+
+
+
       <DragDropContext onDragEnd = {this.onDragEnd}>
         <Container>
       {this.state.columnOrder.map(columnId => {
