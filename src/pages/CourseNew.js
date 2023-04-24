@@ -3,11 +3,16 @@ import logo from './RWUlogo.png';
 import './Courses.css';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import initialData from './initial-data-CSBA';
+import initialData1 from './initial-data-CSBA';
+import initialData2 from './initial-data-CSBS';
+import initialData3 from './initial-data-CM';
+import initialData4 from './initial-data-E';
 import Column from './columns';
+import variable from './index'
 import { DragDropContext } from 'react-beautiful-dnd';
 import ReactConfetti from 'react-confetti';
 import {useEffect, useState} from 'react';
+
 
 const Container = styled.div`
   padding-top: 5px;
@@ -34,10 +39,25 @@ useEffect(()=>{
 
 const [Btn, setBtn] = useState(false);
 
+const state = initialData1;
+
+if(variable === "COMSC BA"){
+  state = initialData1;
+} else if (variable === "COMSC BS"){
+  state = initialData2;
+} else if (variable === "CM"){
+  state = initialData3;
+} else if (variable === "ENGR"){
+  state = initialData4;
+}
+
 //confetti
 class App extends React.Component {
     //This is where we state the initial state from the 4 majors
-    state = initialData;
+
+      state = state;
+    
+    
 
   onDragEnd = result => {
     const {destination, source, draggableId} = result;

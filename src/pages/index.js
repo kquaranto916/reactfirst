@@ -154,15 +154,24 @@ const Home = () => {
   if variable == COMSC BS -> import this excel sheet
   */
 
+  const variable = "";
+
   export default class App extends React.Component {
       constructor() {  
        super();  
        this.state = {selectValue: ''};  // initial state value
+       this.variable = variable;
     }  
+
+
+    //const [message, setMessage] = useState('');
+
+    //const [updated, setUpdated] = useState(message);
 
     // Handles state change
     handleChange = (event) => {
-      this.setState({selectValue: event.target.value}, ()=> {alert(`Value: ${this.state.selectValue}`)});
+      //this.setState({selectValue: event.target.value}, ()=> {alert(`Value: ${this.state.selectValue}`)});
+      this.setState({variable: event.target.value})
       } 
     handleChange1 = (event) => {
       this.setState({selectValue: event.target.files[0]}, ()=> {alert(`Value: ${this.state.selectValue}`)});
