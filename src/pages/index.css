@@ -11,6 +11,16 @@
     left: 0px;
     font-size: 13px;
 }
+
+.logo {   
+  height: 25vmin;
+  pointer-events: none;
+  position: absolute;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  font-size: 5px;
+}
   
   .App-header {
     background-color: #ffffff;

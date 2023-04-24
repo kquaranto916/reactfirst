@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from './RWUlogo.png';
 import './index.css';
+import logo2 from './AdvA.png';
 //import { Confetti } from 'react-dom-confetti';
 
 const Home = () => {
@@ -50,7 +51,7 @@ const Home = () => {
     <header className="App-header">  
     <img src={logo} className="App-logo" alt="logo"/>
         <h1>
-          Advising Assistant
+        <img src={logo2} className="AdvA-logo" alt="logo2" />
         </h1>
     <header>
     <subheading className="subheader">
@@ -184,7 +185,7 @@ const Home = () => {
           <header className="App-header">  
           <img src={logo} className="App-logo" alt="logo"/>
             <h1>
-              Advising Assistant
+              <img src={logo2} className="AdvA-logo" alt="logo2" />
             </h1>
           <header>
             <subheading className="subheader">
