@@ -11,7 +11,6 @@ import ReactConfetti from 'react-confetti';
 import {useEffect, useState} from 'react';
 import {useNavigate} from "react-router";
 import {BrowserRouter as Router} from 'react-router-dom';
-
 const Container = styled.div`
   padding-top: 5px;
   padding-bottom: 10px;
@@ -41,6 +40,8 @@ useEffect(()=>{
 }, [windowDim]);
 
 const [Btn, setBtn] = useState(false);
+
+//confetti
 
 
 class App extends React.Component {
@@ -120,25 +121,40 @@ class App extends React.Component {
   render() {
     return (
         <div className="Course">
-          <header className='header'></header>
-        <header className="Course-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1>
-          <img src={logo2} className="AdvA-logo" alt="logo2" />
-          </h1>
-        </header>
+          <header className='header'>
 {/*confetti*/}
 <div className='confetti'>
         <button className='Btn-Con' onClick={()=> setBtn(!Btn)}>Download!</button>
         {Btn && 
     <ReactConfetti
-        height={windowDim.height}
+        height={2900}
         width={windowDim.width}
         />}
     {/*resetBTN*/}    
     <button className='Btn-Reset' onClick={() => navigate(0)}>Reset Schedule</button>
     </div>      
 {/*confetti*/}
+          </header>
+        <header className="Course-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1>
+          <img src={logo2} className="AdvA-logo" alt="logo2" />
+          </h1>
+        </header>
+
+{/*confetti*/}
+<div className='confetti'>
+        <button onClick={()=> setBtn(!Btn)}>Download!</button>
+        {Btn && 
+    <ReactConfetti
+        height={windowDim.height}
+        width={windowDim.width}
+        />}
+    </div>
+{/*confetti*/}
+
+
+
 
       <DragDropContext onDragEnd = {this.onDragEnd}>
         <Container>

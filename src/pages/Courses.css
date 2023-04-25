@@ -12,11 +12,10 @@
   padding-top: 10px;
   padding-left: 25px;
   padding-right: 25px;
-
 }
 
 .header{
-    padding: 93px;
+    padding: 88px;
     text-align: center;
     background: rgb(0, 56, 101);
     color: white;
@@ -77,16 +76,27 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 }
 
 .confetti{
-position: relative;
-padding-left: 20px;
+  padding: 5px;
 }
 
 .Btn-Con{
-display: flex;
-margin-left: auto;
+  background-color: rgb(0, 56, 101); /* Green */
+  color: #A4C8E1;
+  padding: 8px 16px;
+  text-align: right;
+  float:right;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid white;
 }
 
 .Btn-Reset{
-  display: flex;
-  margin-left: auto;
+  background-color: rgb(0, 56, 101); /* Green */
+  color: #A4C8E1;
+  padding: 8px 16px;
+  text-align: right;
+  float:right;
+  display: inline-block;
+  font-size: 16px;
+  border: 2px solid white;
 }
