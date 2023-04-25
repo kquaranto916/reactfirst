@@ -1,9 +1,12 @@
 import React from 'react';
-import logo from './RWUlogo.png';
+import logo from './rwulogo.png';
 import './Courses.css';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import initialData from './initial-data-CSBA';
+import initialData1 from './initial-data-CSBA';
+import initialData2 from './initial-data-CSBS';
+import initialData3 from './initial-data-CM';
+import initialData4 from './initial-data-E';
 import Column from './columns';
 import { DragDropContext } from 'react-beautiful-dnd';
 import ReactConfetti from 'react-confetti';
@@ -17,7 +20,31 @@ const Container = styled.div`
   display: inline-block;
   align-items: center;
 `;
+
+
+//will have to use window.location.origin for actual deployment but also switch depedning in the intial data file being used
+const CM_FILE = 'http://localhost:3000/CourseNew/initial-data-CM.js'
+
 const Courses1 = () =>{
+  //will likely have to download as JSON and convert on re-upload, heres a source: https://www.geeksforgeeks.org/how-to-save-new-state-to-local-json-using-reactjs/
+  //This one too: https://plainenglish.io/blog/how-to-create-download-and-upload-files-in-react-apps
+  
+
+//download file
+const downloadFileAtURL = (url) => {
+  // used this tutorial: https://www.youtube.com/watch?v=IPEqb_AJbAQ
+  fetch(url).then(respons=> Response.blob()).then(blob=> {
+    const blobURL = window.URL.createObjectURL(new Blob([blob]))
+    const fileName = url.split("/").pop();
+    const aTag = document.createElement("a");
+    aTag.href=blobURL;
+    aTag.setAttrubute("dowload",fileName);
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+  })
+  
+};
 
 //confetti 
 const [windowDim, setDim] = useState({width: window.innerWidth, height:window.innerHeight});
@@ -37,7 +64,7 @@ const [Btn, setBtn] = useState(false);
 //confetti
 class App extends React.Component {
     //This is where we state the initial state from the 4 majors
-    state = initialData;
+    state = initialData3;
 
   onDragEnd = result => {
     const {destination, source, draggableId} = result;
@@ -120,7 +147,7 @@ class App extends React.Component {
         </header>
       {/*confetti*/}
       <div className='confetti'>
-        <button onClick={()=> setBtn(!Btn)}>Download!</button>
+        <button onClick={()=> {setBtn(!Btn); downloadFileAtURL(CM_FILE);}}>Download!</button>
         {Btn && 
         <ReactConfetti
         height={windowDim.height}
