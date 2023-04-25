@@ -10,7 +10,7 @@ import { DragDropContext } from 'react-beautiful-dnd';
 import ReactConfetti from 'react-confetti';
 import {useEffect, useState} from 'react';
 import {useNavigate} from "react-router";
-import {BrowserRouter as Router} from 'react-router-dom';
+import * as FileSaver from 'file-saver';
 const Container = styled.div`
   padding-top: 5px;
   padding-bottom: 10px;
@@ -117,6 +117,11 @@ class App extends React.Component {
 
     this.setState(newState);
   };
+  handleSaveToFile = () => {
+    const json = JSON.stringify(initialData);
+    const blob = new Blob([json], { type: 'application/json' });
+    FileSaver.saveAs(blob, 'items.json');
+  };
 
   render() {
     return (
@@ -124,7 +129,8 @@ class App extends React.Component {
           <header className='header'>
 {/*confetti*/}
 <div className='confetti'>
-        <button className='Btn-Con' onClick={()=> setBtn(!Btn)}>Download!</button>
+        <button className='Btn-Con' onClick={()=> setBtn(!Btn)}>Complete!</button>
+        <button className='Btn-Con' onClick={this.handleSaveToFile}>Download!</button>
         {Btn && 
     <ReactConfetti
         height={2900}
