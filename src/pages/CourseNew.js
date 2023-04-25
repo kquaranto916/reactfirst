@@ -141,21 +141,6 @@ class App extends React.Component {
           <img src={logo2} className="AdvA-logo" alt="logo2" />
           </h1>
         </header>
-
-{/*confetti*/}
-<div className='confetti'>
-        <button onClick={()=> setBtn(!Btn)}>Download!</button>
-        {Btn && 
-    <ReactConfetti
-        height={windowDim.height}
-        width={windowDim.width}
-        />}
-    </div>
-{/*confetti*/}
-
-
-
-
       <DragDropContext onDragEnd = {this.onDragEnd}>
         <Container>
       {this.state.columnOrder.map(columnId => {
