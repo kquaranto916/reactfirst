@@ -39,26 +39,6 @@
   font-size: 50px;
 }
 
-.row1{
-display: inline-block;
-align-items: center;
-padding: 10px;
-position: relative;
-height: auto;
-}
-
-.one-fa{
-  padding-top: 5px;
-  padding-bottom: 10px;
-  width: 100%;
-  padding-left: 35%;;
-}
-
-.one-sp{
-  padding-top: 5px;
-  padding-bottom: 10px;
-}
-
 .Submit-btn{
 align-items: right;
 padding-left: 75%;

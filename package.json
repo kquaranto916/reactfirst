@@ -12,6 +12,7 @@
     "react-beautiful-dnd": "^13.1.1",
     "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
+    "react-drag-drop-files": "^2.3.9",
     "react-dropdown": "^1.11.0",
     "react-html-table-to-excel": "^2.0.0",
     "react-router-dom": "^6.8.0",
