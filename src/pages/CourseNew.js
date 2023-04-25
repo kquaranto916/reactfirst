@@ -19,8 +19,7 @@ const Container = styled.div`
   display: inline-block;
   align-items: center;
 `;
-const Courses1 = () => {
-
+function Courses1() {
   const navigate = useNavigate();
   const handleClick = () => {
     // 👇️ navigate programmatically
@@ -43,6 +42,7 @@ useEffect(()=>{
 const [Btn, setBtn] = useState(false);
 
 //confetti
+
 
 class App extends React.Component {
     //This is where we state the initial state from the 4 majors
@@ -157,7 +157,6 @@ class App extends React.Component {
   }
  }
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
-//ReactDOM.render(<App />, document.getElementById('root'));
 
 };
 export default Courses1;
