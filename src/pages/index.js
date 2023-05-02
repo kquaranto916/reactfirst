@@ -1,3 +1,4 @@
+//inital interface display, drop downs, etc, ReactJS above 
 import React, { useState } from 'react';
 import logo from './RWUlogo.png';
 import './index.css';
@@ -53,7 +54,7 @@ import logo2 from './AdvA.png';
             </p>
           </header>
           </header>
-
+{/*drop downs*/}
           <div className='major'>
             <select onChange={this.handleChange}  id="major">
             <option value="Select Major">Select Major</option>

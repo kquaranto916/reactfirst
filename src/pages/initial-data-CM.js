@@ -1,3 +1,5 @@
+//hardcoded schedule data, same for CSBA, CSBS, AND E
+
 const initialDataCM = {
     tasks: {
         'task-1': {id: 'task-1', content: 'CNST 100 - Introduction to Construction Management'},

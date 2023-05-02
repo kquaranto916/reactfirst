@@ -1,3 +1,4 @@
+// navigation bar, attached to documents in NavBar folder
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';

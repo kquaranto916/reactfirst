@@ -1,3 +1,5 @@
+//second page interface, confetti and droppable code
+
 import React from 'react';
 import logo from './RWUlogo.png';
 import logo2 from './AdvA.png';
@@ -21,12 +23,8 @@ const Container = styled.div`
 `;
 function Courses1() {
   const navigate = useNavigate();
-  const handleClick = () => {
-    // 👇️ navigate programmatically
-    navigate('/');    
-  }
 
-//confetti 
+//confetti start, press button again to stop cofetti 
 const [windowDim, setDim] = useState({width: window.innerWidth, height:window.innerHeight});
 const detectSize=()=>{
   setDim({width: window.innerWidth, height: window.innerHeight});
@@ -41,8 +39,7 @@ useEffect(()=>{
 
 const [Btn, setBtn] = useState(false);
 
-//confetti
-
+//confetti end 
 
 class App extends React.Component {
     //This is where we state the initial state from the 4 majors

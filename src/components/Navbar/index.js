@@ -1,8 +1,8 @@
+//navigation bar display and direction, attached to NavBarElements.js for CSS design and app.js/css 
 import React from "react";
 import { Nav, NavLink, NavMenu }
 	from "./NavbarElements";
 import {useEffect, useState} from 'react';
-import ReactConfetti from 'react-confetti';
 
 const Navbar = () => {
 
@@ -18,7 +18,6 @@ useEffect(()=>{
     }
 }, [windowDim]);
 
-const [Btn, setBtn] = useState(false);
 //confetti
 return (
 	<>
